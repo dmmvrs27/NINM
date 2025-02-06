@@ -1,0 +1,19 @@
+x = (2:0.1:10);
+y = gaussmf(x,[1.5 6]);
+plot(x, y);
+
+x1 = 0:0.1:20;
+x2 = 0:0.1:20;
+[X, Y] = meshgrid(x1, x2);
+Z = min(trimf(X, [7 10 13]), trimf(Y, [7 10 13]));
+plot3(X, Y, Z);
+x3 = defuzz(X,Z,'mom');
+disp('Результат дефаzzификации:');
+disp(x3);
+
+X = 0:0.1:20;
+trimf(X, [7 10 13]
+
+x1 = defuzz(x, mf1, 'centroid');
+h1 = line([x1 x1], [-0.2 1.2],'Color','k');
+t1 = text(x1, -0.2, 'cog','FontWeight','bold');
